@@ -1,16 +1,9 @@
 /**
- * Airtable mock client.
+ * Airtable mock client — test double only.
  *
- * This is the integration target for Part 3c of the assessment. It mimics
- * the relevant slice of the real Airtable API so candidates can build
- * against it without needing real credentials.
- *
- * The interface intentionally matches what the real Airtable JS SDK exposes
- * for create/list/update operations — when this submission is graded against
- * the real Airtable later, no code changes should be needed beyond the
- * environment variables.
- *
- * For the assessment, this in-memory mock is the only implementation.
+ * Use this in unit tests so tests run without real credentials. Your
+ * production implementation must call the real Airtable API using the
+ * official `airtable` npm package.
  */
 
 export type AirtableFields = Record<string, unknown>;
